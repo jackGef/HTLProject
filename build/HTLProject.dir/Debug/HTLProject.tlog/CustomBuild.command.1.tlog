@@ -1,0 +1,10 @@
+^C:\USERS\JACK\DESKTOP\HTLPROJECT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jack/Desktop/HTLProject -BC:/Users/jack/Desktop/HTLProject/build --check-stamp-file C:/Users/jack/Desktop/HTLProject/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
